@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #87CEEB; /* Sky Blue */
+    }
+
+    .pie-chart {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 0deg,
+        violet,
+        indigo,
+        blue,
+        green,
+        yellow,
+        orange,
+        red,
+        violet
+      );
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .reflection {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.8),
+        transparent
+      );
+    }
+
+    .rain-numbers {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+      color: white;
+      animation: rainAnimation 5s linear infinite;
+    }
+
+    @keyframes rainAnimation {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pie-chart">
+    <div class="reflection"></div>
+    <div class="rain-numbers">123456789</div>
+  </div>
+</body>
+</html>
